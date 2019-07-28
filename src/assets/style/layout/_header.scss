@@ -1,0 +1,131 @@
+.header {
+  margin-bottom: 1rem;
+  .language-section {
+    img {
+      width: 1.5rem;
+      margin-right: 0.7rem;
+      &.active {
+        border: $border-img;
+        border-radius: 2rem;
+      }
+    }
+  }
+
+  .search-section {
+    position: relative;
+    padding: 0 1rem;
+    .form-rounded {
+      border-radius: 1rem;
+      border: 0;
+    }
+    i {
+      right: 59%;
+      top: 27%;
+      position: absolute;
+      display: block;
+      color: $color-grey-dark;
+      font-size: 19px;
+      font-weight: bold;
+    }
+  }
+}
+
+.create-post {
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 11rem;
+  margin-bottom: 0.5rem;
+  .post-title {
+    display: flex;
+    align-items: center;
+    label {
+      color: $color-grey-dark;
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+  }
+  .post-form {
+    width: 100%;
+  }
+  textarea, textarea:focus {
+    background-color: $color-grey;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.posts {
+  .post-container {
+    background-color: $color-white;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    color: $color-grey-dark;
+    .post-header {
+      display: flex;
+      justify-content: space-between;
+      .post-title {
+        display: flex;
+        align-items: center;
+        .details {
+          display: flex;
+          flex-direction: column;
+          .user {
+            .username {
+              margin-right: 0.5rem;
+              color: $color-grey-dark;
+              font-size: 1.1rem;
+            }
+            .email {
+              color: $color-grey-light;
+              font-size: 1.1rem;
+              font-weight: 600;
+            }
+          }
+          .time {
+            color: $color-grey-dark;
+            font-size: 0.7rem;
+            margin-top: -0.3rem;
+          }
+        }
+      }
+    }
+    .post-content {
+      padding-top: 0.5rem;
+      margin: 1rem 0;
+      border-top: $border-article;
+      article {
+        line-height: 1.3rem;
+        word-break: break-word;
+      }
+    }
+  }
+}
+
+.comments {
+  color: $color-grey-dark;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  .comment-content {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .btn-send {
+    margin-bottom: 0.5rem;
+  }
+  .comment-container {
+    background-color: $color-white;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    padding-right: 0.1rem;
+    display: flex;
+    align-items: center;
+    .comment {
+      font-size: 0.8rem;
+      line-height: 1rem;
+      word-break: break-word;
+    }
+  }
+}

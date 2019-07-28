@@ -1,0 +1,30 @@
+{
+  "common": {
+    "buttons": {
+      "post": "Post",
+      "comment": "Comment",
+      "follow": "Follow",
+      "send": "Send"
+    },
+    "languages": {
+      "german": "(German)",
+      "english": "(English)"
+    },
+    "input-placeholder": {
+      "search": "Search",
+      "post-content": "Write something...",
+      "comment-content": "Type anything"
+    },
+    "labels": {
+      "post-title": "What's happening?"
+    },
+    "datetime": {
+      "day": "day",
+      "days": "days",
+      "minute": "min",
+      "minutes": "mins",
+      "hour": "hr",
+      "hours": "hrs"
+    }
+  }
+}

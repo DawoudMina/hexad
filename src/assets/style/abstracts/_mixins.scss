@@ -1,0 +1,78 @@
+@mixin absolute-center($axis: "both", $top: 50%, $left: 50%) {
+  position: absolute;
+  @if $axis== "y" {
+    top: $top;
+    transform: translateY(-50%);
+  }
+  @if $axis== "x" {
+    left: $left;
+    transform: translateX(-50%);
+  }
+  @if $axis== "both" {
+    top: $top;
+    left: $left;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+  $padding: unquote(($y / $x) * 100 + "%");
+  @if $pseudo {
+    &::before {
+      @include pseudo($pos: relative);
+      width: 100%;
+      padding-top: $padding;
+    }
+  } @else {
+    padding-top: $padding;
+  }
+}
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint==xs {
+    @media only screen and (max-width: 21.875em) {
+      @content;
+    } //350px
+  }
+  @if $breakpoint==sm {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+  @if $breakpoint==md {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+  @if $breakpoint==lg {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+  @if $breakpoint==xl {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800
+  }
+}

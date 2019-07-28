@@ -1,0 +1,4 @@
+<button (click)="buttonClicked.emit()" class="btn {{config.extraCssClasses}}"
+  [ngClass]="{'btn-primary': !config.outlineColorOnly, 'btn-outline-primary': config.outlineColorOnly}">
+  <li *ngIf="config.icon" [ngClass]="config.icon"></li> {{config.text|translate}}
+</button>

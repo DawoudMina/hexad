@@ -1,0 +1,5 @@
+<div>
+  <textarea #content class="form-control comment-content" rows="2"
+    placeholder="{{'common.input-placeholder.comment-content'|translate}}"></textarea>
+    <hex-button [config]="btnConfig" (buttonClicked)="addComment(content.value)"></hex-button>
+</div>

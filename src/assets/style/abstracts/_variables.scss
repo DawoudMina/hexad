@@ -1,0 +1,45 @@
+/* Primary Colors */
+$color-primary: #4680ff;
+$color-primary-light: #5dbdff;
+$color-white: #ffffff;
+$color-img-border: #ffc107;
+
+/* Background Colors */
+$color-background: #f5f6fa;
+
+/* Alert Colors */
+$color-alert-error: #fa607d;
+
+/* Gray Colors*/
+$color-grey: #f5f6fa;
+$color-grey-light: #8b9bb2;
+$color-grey-light-1: #d4d4d4;
+$color-grey-light-2: #e2e2e2;
+$color-grey-light-3: #fbfbfb;
+$color-grey-dark: #707070;
+$color-menu-active: #f6f9fd;
+
+/* Shadows */
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+/* Separator Color */
+$line: 1px solid $color-grey-light;
+$bp-largest: 75em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+/* Font Weights */
+$f-light: 300;
+$f-regular: 400;
+$f-medium: 500;
+$f-semibold: 600;
+$f-bold: 700;
+$f-heavy: 800;
+
+/* Borders */
+$border-img: 2px solid $color-img-border;
+$border-article: 0.8px solid $color-grey-dark;
+$box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);

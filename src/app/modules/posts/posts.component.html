@@ -1,0 +1,29 @@
+<form [formGroup]="searchForm" class='search-section form-group'>
+  <i *ngIf="!searchForm.controls['searchField'].value" class='fas fa-search'></i>
+  <input formControlName="searchField" type='text' class='form-control form-rounded text-center'
+    placeholder="{{ 'common.input-placeholder.search' | translate }}" />
+  </form>
+
+<hex-create-post (postAdded)="addNewPost($event)"></hex-create-post>
+
+<div class="posts">
+  <div *ngFor="let post of allPosts | hexFilter: searchForm.controls['searchField'].value : 'content' : 'owner.fullName' : 'owner.email'">
+    <div class="post-container">
+      <hex-post-header [userFullName]="post.owner.fullName" [userEMail]="post.owner.email" [postDateTime]="post.time">
+      </hex-post-header>
+      <hex-post-body [content]="post.content"></hex-post-body>
+      <hex-post-footer [commentsCount]="post.comments?.length" [likeCount]="post.likeCount"
+        (likeButtonClicked)="increaseLikes(post)" (commentButtonClicked)="showOrHideComments(post)"></hex-post-footer>
+    </div>
+    <div *ngIf="post === currentPost; then comments"></div>
+  </div>
+
+  <ng-template #comments>
+    <div class="comments">
+      <hex-create-comment (commentAdded)="addNewComment($event)"></hex-create-comment>
+      <hex-comment *ngFor="let comment of currentPost.comments.reverse()" [content]="comment.content"></hex-comment>
+    </div>
+  </ng-template>
+
+
+</div>

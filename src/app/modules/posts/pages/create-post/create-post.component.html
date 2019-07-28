@@ -1,0 +1,11 @@
+<div class="create-post">
+  <div class="post-title">
+    <img class="rounded float-left" src="../../../assets/images/smile.png">
+    <label>{{'common.labels.post-title'|translate}}</label>
+  </div>
+  <form [formGroup]="postForm" class="post-form">
+      <textarea formControlName="post-content" class="form-control" rows="2"
+      placeholder="{{'common.input-placeholder.post-content'|translate}}"></textarea>
+    <hex-button [config]="btnConfig" (buttonClicked)="addPost()"></hex-button>
+  </form>
+</div>

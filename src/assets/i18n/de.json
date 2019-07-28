@@ -1,0 +1,30 @@
+{
+  "common": {
+    "buttons": {
+      "post": "Post",
+      "comment": "Kommentar",
+      "follow": "Folgen",
+      "send": "Senden"
+    },
+    "languages": {
+      "german": "(German)",
+      "english": "(English)"
+    },
+    "input-placeholder": {
+      "search": "Suche",
+      "post-content": "Schreib etwas ...",
+      "comment-content": "Gib irgendetwas ein"
+    },
+    "labels": {
+      "post-title": "Was ist los?"
+    },
+    "datetime": {
+      "day": "tag",
+      "days": "tage",
+      "minute": "minute",
+      "minutes": "minuten",
+      "hour": "stunde",
+      "hours": "stunden"
+    }
+  }
+}
