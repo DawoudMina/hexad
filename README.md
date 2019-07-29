@@ -5,7 +5,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
+Navigate to `https://hexad-d1b42.firebaseapp.com` to open the application.
+
+## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
 
 ## Code scaffolding
 
